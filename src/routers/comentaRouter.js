@@ -21,6 +21,7 @@ router.get('/:id', async (req, res) => {
 router.get('/login', async (req, res) => {
     const { email, password } = req.body;
 
+
     const cadastros = await cadastroModel.findAll();
     const encontrado = cadastros.find(u => u.email == email && u.password == password);
 
@@ -48,7 +49,7 @@ router.post('/cadastro', async (req, res) => {
 
 
 
-
+// utilizado na api de exemplo
 // router.delete('/:id', async (req, res) => {//delete
 //     res.status(204).send({
 
